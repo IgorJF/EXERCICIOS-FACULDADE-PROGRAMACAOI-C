@@ -6,16 +6,16 @@ int main(){
     float inv[5];
 
     for(i = 0; i < 5; i++){
-        fat[i] = 1;
+        fat[i] = 1; //inicializar o vetor
         printf("Digite o numero: ");
         scanf("%d", &num[i]);
 
-        fatS = num[i];
+        fatS = num[i];//para nao alterar o num[i]
 
         inv[i] = 1.0/num[i];
     
         while(fatS > 0){
-            fat[i] = fat[i] * fatS;
+            fat[i] = fat[i] * fatS;//acumuladora
             fatS = fatS - 1;
         }
     }
