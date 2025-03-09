@@ -43,9 +43,31 @@ int main() {
 
     return 0;
 }
-
-
 /*
+
+#include <stallb.n>
+void substituirGene (char strDna[], char strGene [])
+
+int i;
+//percorrendo a string
+for (i=0; strDna[i] != '\o'; i++) {
+//sa tiver alouma nosicao na string que seia = 0 e 1 da string
+//Gene (0= C 1 = T
+if (strDna[i] == strGene [0] && strDna[i+1] == strGene [1]) {
+strDna[i] = 'x'; //troca a posicao por X
+strDna [i+1] = 'X'; //txoca a proxima pom
+
+}
+
+int main ()
+
+char dna [] = "AAGCTTAACGGCT";
+char gene [] = "CT";
+
+substituirGene (dna, gene) ;
+printf ("$s\n", dna);
+return 0;
+
 strstr(str1, str2)	Procura str2 dentro de str1. Retorna um ponteiro para a posição encontrada ou NULL.
 char *pos = strstr(strDna, strGene);	Armazena o ponteiro da posição onde strGene aparece em strDna.
 fgets(variavel, tam, stdin);	Lê uma string do teclado.
